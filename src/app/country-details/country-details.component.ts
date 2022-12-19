@@ -1,12 +1,11 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-
-import { Country } from '../models/country.model';
+import { Country } from '../store/models/country.model';
 
 @Component({
-  selector: 'app-country-details',
+  selector: 'country-details',
   templateUrl: './country-details.component.html',
   styleUrls: ['./country-details.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CountryDetailsComponent {
   @Input() country: Country;

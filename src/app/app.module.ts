@@ -11,8 +11,8 @@ import { AppComponent } from './app.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
 import { CountriesService } from './countries.service';
 import { DropdownComponent } from './dropdown/dropdown.component';
-import { appReducer } from './state/app.reducer';
-import { AppEffects } from './state/app.effects';
+import { appReducer } from './store/app.reducer';
+import { AppEffects } from './store/app.effects';
 
 @NgModule({
   imports: [
@@ -20,17 +20,17 @@ import { AppEffects } from './state/app.effects';
     FormsModule,
     HttpClientModule,
     StoreModule.forRoot({
-      app: appReducer
+      app: appReducer,
     }),
     StoreDevtoolsModule.instrument({
       name: 'Region and Country App',
       maxAge: 25,
-      logOnly: environment.production
+      logOnly: environment.production,
     }),
-    EffectsModule.forRoot([AppEffects])
+    EffectsModule.forRoot([AppEffects]),
   ],
   declarations: [AppComponent, DropdownComponent, CountryDetailsComponent],
   bootstrap: [AppComponent],
-  providers: [CountriesService]
+  providers: [CountriesService],
 })
 export class AppModule {}

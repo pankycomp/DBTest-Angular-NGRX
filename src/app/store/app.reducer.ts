@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
-import { Country } from '../models/country.model';
-import { Region } from '../models/region.model';
+import { Country } from '../store/models/country.model';
+import { Region } from '../store/models/region.model';
 import * as AppActions from './app.actions';
 import { State } from './app.state';
 

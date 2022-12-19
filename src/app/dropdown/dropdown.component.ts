@@ -4,17 +4,17 @@ import {
   EventEmitter,
   Input,
   Output,
-} from "@angular/core";
+} from '@angular/core';
 
-import { Country } from "../models/country.model";
-import { DropdownChangeValue } from "../models/dropdown.model";
-import { Region } from "../models/region.model";
+import { Country } from '../models/country.model';
+import { DropdownChangeValue } from '../models/dropdown.model';
+import { Region } from '../models/region.model';
 
 @Component({
-  selector: "app-dropdown",
-  templateUrl: "./dropdown.component.html",
-  styleUrls: ["./dropdown.component.css"],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'dropdown',
+  templateUrl: './dropdown.component.html',
+  styleUrls: ['./dropdown.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DropdownComponent {
   @Input() label: string;
@@ -25,7 +25,7 @@ export class DropdownComponent {
   onOptionChange(value) {
     this.optionChange.emit({
       label: this.label,
-      value
+      value,
     });
   }
 }
