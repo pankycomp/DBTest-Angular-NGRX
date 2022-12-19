@@ -9,7 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { AppComponent } from './app.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
-import { CountriesService } from './countries.service';
+import { CountriesService } from './service/countries.service';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { appReducer } from './store/app.reducer';
 import { AppEffects } from './store/app.effects';

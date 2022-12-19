@@ -5,7 +5,7 @@ import { of } from 'rxjs';
 
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 
-import { CountriesService } from '../countries.service';
+import { CountriesService } from '../service/countries.service';
 import * as AppActions from './app.actions';
 
 @Injectable()
